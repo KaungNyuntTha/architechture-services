@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;400;500;600&display=swap');
+:root{
+    --orange:#ff7a00;
+}
+*{
+    padding: 0; margin: 0;  
+    box-sizing: border-box;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    font-family: 'Exo 2', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+.heading{
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 1.7rem;
+    margin: 2rem 0;
+    padding-top: 6rem;
+    color: #666;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: var(--orange);
+    text-underline-offset: -1.4rem;
+}
+
+/* header starts */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem 2rem;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
+}
+.header .logo{
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.header .logo i{
+    color: var(--orange);
+    font-size: 2.5rem;
+}
+.header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0; padding: 0;
+}
+.header nav ul li{
+    margin: 0 1.5rem;
+}
+.header nav ul li a{
+    font-size: 2rem;
+    color: #666;
+    text-decoration: none;
+}
+.header nav ul li a:hover{
+    color: #000;
+}
+.header .fa-bars{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #666;
+    display: none;
+}
+.fa-times{
+    transform: rotate(180deg);
+}
+/* header ends */
+
+/* home starts */
+.home .hero{
+    min-height: 60vh;
+    background: url(../gallery/bedroom1.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+.home .hero .text1{
+    font-size: 5rem;
+    width: 45rem;
+    background: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    align-items: center;
+    opacity: .8;
+}
+.home .hero .text2 { 
+    font-size: 3rem;
+    width: 35rem;
+    background: var(--orange);
+    padding: 1rem 2rem;
+    align-items: center;
+    opacity: .8;
+    margin: 1rem 0rem;
+    color: #fff;
+}
+.home .counting{
+    min-height: 40vh;
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.home .counting .box{
+    margin: 2rem 4rem;
+    text-align: center;
+}
+.home .counting .box .count{
+    font-size: 7rem;
+    color: #444;
+}
+.home .counting .box h3{
+    font-size: 2rem;
+    color: var(--orange);
+}
+/* home ends */
+
+/* about starts */
+.about{
+    min-height: 100vh;
+    padding-bottom: 3rem;
+}
+.about .image{
+    padding: 2rem;
+}
+.about .image img{
+    height: 45rem;
+    object-fit: cover;
+    box-shadow: 2.5rem 2.5rem 0 1rem rgba(0, 0, 0, .3);
+}
+.about .info{
+    padding-top: 2rem;
+    margin-top: 3rem;
+}
+.about .info h2{
+    color: var(--orange);
+    font-size: 3rem;
+}
+.about .info p{
+    margin: 2rem 0;
+    color: #444;
+    font-size: 1.4rem;
+}
+.about .info .icons a{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    color: #fff;
+    background: #333;
+    text-align: center;
+    border-radius: .5rem;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+.about .info .icons a:hover{
+    background: var(--orange);
+}
+/* about ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media(max-width : 768px){
+    html{
+        font-size: 50%;
+    }
+    .header .fa-bars{
+        display: block;
+    }
+    .header nav{
+        position: fixed;
+        top: 6rem; right: -120%;
+        height: calc(100vh - 6rem);
+        width: 100vw;
+        background: rgba(0,0,0,.5);
+        z-index: 1000;
+        border-top: .1rem solid rgba(0,0,0,.3);
+    }
+    .header nav ul{
+        height: 100%;
+        width: 33rem;
+        background: #fff;
+        flex-flow: column;
+        justify-content: center;
+        float: right;
+    }
+    .header nav ul li{
+        margin: 1rem 0;
+    }
+    .header nav ul li a{
+        display: block; 
+        padding: .5rem 0;
+        border: .1rem solid rgba(0, 0, 0, .3);
+        width: 25rem;
+        border-radius: 5rem;
+        text-align: center;
+    }
+    .header nav ul li a:hover{
+        background: #333;
+        color: #fff;
+    }
+    .header .nav-toggle{
+        right: 0;
+    }
+}
+@media(max-width : 400px){
+    .home .hero .text1 {
+        font-size: 3.5rem;
+        width: 35rem;       
+    }
+.home .hero .text2 {
+        font-size: 2.5rem;
+        width: 33rem;
+    }
+}
