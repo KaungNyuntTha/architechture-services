@@ -66,6 +66,7 @@ body{
 }
 .header nav ul li a:hover{
     color: #000;
+    text-decoration: underline;
 }
 .header .fa-bars{
     font-size: 2.5rem;
@@ -171,9 +172,226 @@ body{
 }
 /* about ends */
 
+/* services starts */
+.services{
+    min-height: 100vh;
+}
+.services .box-container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.services .box-container .box{
+    height: 25rem; width: 25rem;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
+    border-left: .5rem solid var(--orange);
+    border-right: .5rem solid var(--orange);
+    border-radius: .5rem;
+    text-align: center;
+    padding-top: 6rem;
+    margin: 2rem 3rem;
+}
+.services .box-container .box .fa{
+    color: var(--orange);
+    font-size: 5rem;
+}
+.services .box-container .box p{
+    color: #333;
+    font-size: 1.1rem;
+    margin: 2rem 0;
+}
+/* services ends */
 
+/* project starts */
+.projects{
+    min-height: 100vh;
+    background: #333;
+}
+.projects .heading{
+    color: #fff;
+}
+.projects .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.projects .box-container .box{
+    height: 20rem;
+    width: 30rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 .2rem .5rem #000;
+    overflow: hidden;
+}
+.projects .box-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.projects .box-container .box img:hover{
+    transform: scale(1.4);
+}
+/* project ends */
 
+/* contact starts */
+.contact{
+    min-height: 100vh;
+}
+.contact .contact-box-container{
+    width: 93%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact .contact-box-container .contact-box{
+    height: 15rem;
+    flex: 1 0 30rem;
+    margin: 2rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    text-align: center;
+    padding-top: 4rem;
+}
+.contact .contact-box-container .contact-box i{
+    color: var(--orange);
+    font-size: 4rem;
+} 
+.contact .contact-box-container .contact-box h3{
+    font-size: 1.8rem;
+    color: #444;
+    margin: 2rem 0;
+}
+.contact .form-container{
+    width: 90%;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
+}
+.contact .form-container form input, textarea{
+    height: 4.5rem;
+    padding: 0 1rem;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+    border: none;
+    outline: none;
+    color: #333;
+}
+.contact .form-container form .input-box{
+    display: flex;
+    justify-content: space-between;
+}
+.contact .form-container form input[type="text"]{
+    width: 49%;
+}
+.contact .form-container form input[type="email"] {
+    width: 100%;
+}
+.contact .form-container form textarea {
+    width: 100%;
+    height: 20rem;padding: 1rem;
+    resize: none; overflow-y: auto;
+}
+.contact .form-container form input[type="submit"] {
+    background: var(--orange);
+    width: 15rem;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: .5rem;
+}
+.contact .form-container form input[type="submit"]:hover {
+    opacity: .8;
+}
+/* contact ends */
 
+/* footer starts */
+.footer{
+    background: #333;
+    text-align: center;
+}
+.footer .row{
+    width: 100%;
+    padding: 1rem;
+    margin-left: 0;
+}
+.footer .row .logo {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.footer .row .logo i {
+    color: var(--orange);
+    font-size: 2.5rem;
+}
+.footer .row .col-md-3{
+    margin: 1rem 0;
+}
+.footer h2{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.footer p{
+    font-size: 1.1rem;
+    color:#ccc;
+}
+.footer .list{
+    display: flex;
+    flex-flow: column;
+}
+.footer .list a{
+    color: #ccc;
+    font-size: 1.7rem;
+    text-decoration: none;
+}
+.footer .list a:hover{
+    text-decoration: underline;
+}
+.footer .letter p{
+    font-size: 2rem;
+}
+.footer .letter input[type="email"]{
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0 1rem;
+    color:#fff;
+    height: 3rem;
+    width: 100%;
+    border: .1rem solid #fff;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+}
+.footer .letter input[type="submit"] {
+    outline: none;
+    border: none;
+    background: #fff;
+    margin: 1rem 0;
+    width: 10rem;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+}
+.footer .letter input[type="submit"]:hover{
+    background: var(--orange);
+    color: #fff;
+}
+.footer .credit{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    margin-bottom: 0;
+    border-top: .1rem solid #aaa;
+    letter-spacing: .2rem;
+}
+.footer span{
+    color: var(--orange);
+}
+/* footer ends */
 
 
 
